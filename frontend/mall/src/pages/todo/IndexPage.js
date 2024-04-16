@@ -1,4 +1,3 @@
-import React, {useCallback} from 'react';
 import BasicLayout from "../../layouts/BasicLayout";
 import {Outlet, useNavigate} from "react-router-dom";
 
@@ -6,13 +5,13 @@ function IndexPage(props) {
 
     const navigate = useNavigate()
 
-    const handleClickList = useCallback(() => {
+    const handleClickList = () => {
         navigate({pathname: 'list'})
-    }, [])
+    }
 
-    const handleClickAdd = useCallback(() => {
+    const handleClickAdd = () => {
         navigate({pathname: 'add'})
-    }, [])
+    }
 
     return (
         <BasicLayout>
